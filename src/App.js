@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import theme from './themes/theme';
 import Movies from './containers/Movies';
 import {Routes,Route} from 'react-router-dom'
+import Pricing from './containers/Pricing';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="/" element={<Movies />}></Route>
           <Route path="about" element={<Box sx={{mt:10}}>Halaman About</Box>}></Route>
           <Route path="indonesian" element={<Box sx={{mt:10}}>Halaman indonesian</Box>}></Route>
-          <Route path="pricing" element={<Box sx={{mt:10}}>Halaman pricing</Box>}></Route>
+          <Route path="pricing" element={<Pricing />}></Route>
         </Routes>
         <Movies></Movies>
       </div>
