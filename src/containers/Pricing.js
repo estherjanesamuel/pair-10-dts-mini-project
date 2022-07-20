@@ -24,8 +24,8 @@ const rows = [
 const Pricing = () => {
     let navigate = useNavigate();
 
-    const onSubscribed = () => {
-        navigate('/subscribed');
+    const onSubscribed = (plan) => {
+        navigate(`/subscribed/${plan}`);
     }
     return (
         <Box
@@ -69,13 +69,13 @@ const Pricing = () => {
                         <TableRow>
                             <TableCell></TableCell>
                             <TableCell align="center">
-                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
+                                <Button variant="contained" onClick={() => onSubscribed('bronze')}>Buy now</Button>
                             </TableCell>
                             <TableCell align="center">
-                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
+                                <Button variant="contained" onClick={() => onSubscribed('gold')}>Buy now</Button>
                             </TableCell>
                             <TableCell align="center">
-                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
+                                <Button variant="contained" onClick={() => onSubscribed('platinum')}>Buy now</Button>
                             </TableCell>
                         </TableRow>
                     </TableFooter>
