@@ -9,6 +9,7 @@ import theme from './themes/theme';
 import Movies from './containers/Movies';
 import {Routes,Route} from 'react-router-dom'
 import Pricing from './containers/Pricing';
+import Subscribed from './containers/Subscribed';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="about" element={<Box sx={{mt:10}}>Halaman About</Box>}></Route>
           <Route path="indonesian" element={<Box sx={{mt:10}}>Halaman indonesian</Box>}></Route>
           <Route path="pricing" element={<Pricing />}></Route>
-          <Route path="subscribed" element={<Box sx={{mt:10}}>Thank you for subscribing!</Box>}></Route>
+          <Route path="subscribed" element={<Subscribed />}></Route>
           
         </Routes>
         <Movies></Movies>
