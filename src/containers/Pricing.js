@@ -6,6 +6,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import {useNavigate} from "react-router-dom"
 import * as React from 'react';
 
 const createData = (feature, bronze, gold, platinum) => {
@@ -21,6 +22,11 @@ const rows = [
 ]
 
 const Pricing = () => {
+    let navigate = useNavigate();
+
+    const onSubscribed = () => {
+        navigate('/subscribed');
+    }
     return (
         <Box
             sx={{
@@ -63,13 +69,13 @@ const Pricing = () => {
                         <TableRow>
                             <TableCell></TableCell>
                             <TableCell align="center">
-                                <Button variant="contained">Buy now</Button>
+                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
                             </TableCell>
                             <TableCell align="center">
-                                <Button variant="contained">Buy now</Button>
+                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
                             </TableCell>
                             <TableCell align="center">
-                                <Button variant="contained">Buy now</Button>
+                                <Button variant="contained" onClick={onSubscribed}>Buy now</Button>
                             </TableCell>
                         </TableRow>
                     </TableFooter>

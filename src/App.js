@@ -19,6 +19,8 @@ const App = () => {
           <Route path="about" element={<Box sx={{mt:10}}>Halaman About</Box>}></Route>
           <Route path="indonesian" element={<Box sx={{mt:10}}>Halaman indonesian</Box>}></Route>
           <Route path="pricing" element={<Pricing />}></Route>
+          <Route path="subscribed" element={<Box sx={{mt:10}}>Thank you for subscribing!</Box>}></Route>
+          
         </Routes>
         <Movies></Movies>
       </div>
