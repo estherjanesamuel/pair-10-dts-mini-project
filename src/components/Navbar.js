@@ -27,7 +27,7 @@ const navItems = [
             </Typography>
             <Box sx={{display: 'block'}}>
                 {navItems.map((item) => (
-                    <NavLink to={item.link} className={({isActive}) => isActive ? 'nav-active' : 'nav-inactive'} >
+                    <NavLink to={item.link} key={item.text} className={({isActive}) => isActive ? 'nav-active' : 'nav-inactive'} >
                         {item.text}
                     </NavLink> 
                 ))}
