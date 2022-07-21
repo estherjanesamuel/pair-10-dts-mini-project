@@ -9,7 +9,8 @@ import { Link,NavLink } from 'react-router-dom';
 const navItems = [
     {text: 'Indonesian', link: '/indonesian'},
     {text: 'Pricing', link: '/pricing'},
-    {text: 'About', link: '/about'}];
+    {text: 'About', link: '/about'},
+    {text: 'Sign in', link: '/login'},];
   
   const Navbar = () => {
     return (
