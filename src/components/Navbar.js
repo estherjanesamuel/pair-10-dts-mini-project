@@ -5,12 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography  from '@mui/material/Typography';
 import * as React from 'react';
 import { Link,NavLink } from 'react-router-dom';
+import UserLog from './UserLog';
 
 const navItems = [
     {text: 'Indonesian', link: '/indonesian'},
     {text: 'Pricing', link: '/pricing'},
     {text: 'About', link: '/about'},
-    {text: 'Sign in', link: '/login'},];
+    ];
   
   const Navbar = () => {
     return (
@@ -32,6 +33,7 @@ const navItems = [
                         {item.text}
                     </NavLink> 
                 ))}
+                <UserLog isLoggedIn={false} />
             </Box>
           </Toolbar>
         </AppBar>
