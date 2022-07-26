@@ -16,7 +16,6 @@ const App = () => {
       <div className='App'>
         <Navbar />
         <Outlet />
-        <Movies />
       </div>
     </ThemeProvider>
   );

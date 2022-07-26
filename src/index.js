@@ -5,25 +5,32 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import Movies from './containers/Movies';
 import { Box } from '@mui/material';
-import {Routes,Route,Link} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Pricing from './containers/Pricing';
 import Subscribed from './containers/Subscribed';
 import Register from './containers/Register';
 import Login from './containers/Login';
+import NotFound from './containers/NotFound';
+import About from './containers/About'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}></Route>
-        <Route path="/" element={<Movies />}></Route>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Movies />}></Route>
+          <Route path="about" element={<About />}>
+            <Route path="description" element={<Box sx={{mt:10}}>Provides movies in your hand</Box>}></Route>
+            <Route path="services" element={<Box sx={{mt:10}}>Streaming moviesm Idonesian film and film review.</Box>}></Route>
+          </Route>
+          <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>}></Route>
+          <Route path="pricing" element={<Pricing />}></Route>
+          <Route path="subscribed/:plan" element={<Subscribed />}></Route>
+        </Route>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="about" element={<Box sx={{ mt: 10 }}>Halaman About</Box>}></Route>
-        <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>}></Route>
-        <Route path="pricing" element={<Pricing />}></Route>
-        <Route path="subscribed/:plan" element={<Subscribed />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
