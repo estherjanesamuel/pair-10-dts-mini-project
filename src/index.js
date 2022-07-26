@@ -11,14 +11,19 @@ import Subscribed from './containers/Subscribed';
 import Register from './containers/Register';
 import Login from './containers/Login';
 import NotFound from './containers/NotFound';
-import About from './containers/About'
+import About from './containers/About';
+import Private from './components/Private';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/" element={
+          <Private>
+            <App />
+          </Private>
+          }>
           <Route path="/" element={<Movies />}></Route>
           <Route path="about" element={<About />}>
             <Route path="description" element={<Box sx={{mt:10}}>Provides movies in your hand</Box>}></Route>
